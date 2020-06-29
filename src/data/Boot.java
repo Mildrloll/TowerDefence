@@ -1,24 +1,13 @@
 package data;
 
-import org.lwjgl.LWJGLException;
 import org.lwjgl.opengl.Display;
-import org.lwjgl.opengl.DisplayMode;
 
+import static helpers.Artist.beginSession;
 import static org.lwjgl.opengl.GL11.*;
 
 public class Boot {
     public Boot() {
-        Display.setTitle("Tower Defence");
-        try {
-            Display.setDisplayMode(new DisplayMode(600, 400));
-            Display.create();
-        } catch (LWJGLException e) {
-            e.printStackTrace();
-        }
-        glMatrixMode(GL_PROJECTION);
-        glLoadIdentity();
-        glOrtho(0, 600, 400, 0, 1, -1);
-        glMatrixMode(GL_MODELVIEW);
+        beginSession();
         float width = 50;
         float height = 50;
         float x = 100;
