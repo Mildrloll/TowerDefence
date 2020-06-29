@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="lwjgl">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/OneDrive/Skrivebord/TowerDefence/lib/jars/lwjgl.jar!/" />
+      <root url="jar://$USER_HOME$/OneDrive/Skrivebord/TowerDefence/lib/jars/lwjgl_util.jar!/" />
+      <root url="jar://$USER_HOME$/OneDrive/Skrivebord/TowerDefence/lib/jars/slick-util.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
