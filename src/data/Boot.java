@@ -1,9 +1,8 @@
 package data;
 
 import org.lwjgl.opengl.Display;
-import org.newdawn.slick.opengl.Texture;
 
-import static helpers.Artist.*;
+import static helpers.Artist.beginSession;
 
 public class Boot {
     public Boot() {
@@ -11,8 +10,8 @@ public class Boot {
         Tile tile = new Tile(0, 0, 64, 64, TileType.Grass);
         Tile tile2 = new Tile(0, 64, 64, 64, TileType.Dirt);
         while (!Display.isCloseRequested()) {
-            drawQuadTex(tile.getTexture(), tile.getX(), tile.getY(), tile.getWidth(), tile.getHeight());
-            drawQuadTex(tile2.getTexture(), tile2.getX(), tile2.getY(), tile2.getWidth(), tile2.getHeight());
+            tile.draw();
+            tile2.draw();
             Display.update();
             Display.sync(60);
         }
