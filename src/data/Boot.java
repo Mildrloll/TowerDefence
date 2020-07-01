@@ -4,7 +4,6 @@ import org.lwjgl.opengl.Display;
 
 import static helpers.Artist.beginSession;
 import static helpers.Artist.drawQuad;
-import static org.lwjgl.opengl.GL11.*;
 
 public class Boot {
     public Boot() {
