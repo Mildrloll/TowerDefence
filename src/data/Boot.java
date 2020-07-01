@@ -8,11 +8,11 @@ import static helpers.Artist.*;
 public class Boot {
     public Boot() {
         beginSession();
-        Texture t = quickLoad("Dirt Texture");
-        Texture t2 = quickLoad("Grass Texture");
+        Tile tile = new Tile(0, 0, 64, 64, TileType.Grass);
+        Tile tile2 = new Tile(0, 64, 64, 64, TileType.Dirt);
         while (!Display.isCloseRequested()) {
-            drawQuadTex(t, 0, 0, 64, 64);
-            drawQuadTex(t2, 64, 0, 64, 64);
+            drawQuadTex(tile.getTexture(), tile.getX(), tile.getY(), tile.getWidth(), tile.getHeight());
+            drawQuadTex(tile2.getTexture(), tile2.getX(), tile2.getY(), tile2.getWidth(), tile2.getHeight());
             Display.update();
             Display.sync(60);
         }
