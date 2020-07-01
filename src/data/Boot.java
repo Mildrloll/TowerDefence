@@ -3,15 +3,15 @@ package data;
 import org.lwjgl.opengl.Display;
 
 import static helpers.Artist.beginSession;
-import static helpers.Artist.drawQuad;
-import static org.lwjgl.opengl.GL11.*;
 
 public class Boot {
     public Boot() {
         beginSession();
+        Tile tile = new Tile(0, 0, 64, 64, TileType.Grass);
+        Tile tile2 = new Tile(0, 64, 64, 64, TileType.Dirt);
         while (!Display.isCloseRequested()) {
-            drawQuad(50, 50, 100, 100);
-            drawQuad(150, 150, 100, 100);
+            tile.draw();
+            tile2.draw();
             Display.update();
             Display.sync(60);
         }
